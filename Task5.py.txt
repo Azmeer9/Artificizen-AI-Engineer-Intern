@@ -1,0 +1,15 @@
+class Person:
+    def __init__(self, name, age):  
+        self.name = name 
+        self.age = age 
+
+    @classmethod
+    def from_birth_year(cls, name, year):
+        age = 2026 - year
+        return cls(name, age)
+
+p1 = Person("Azmeer", 24)  
+p2 = Person.from_birth_year("Amary", 2002)
+
+print(p1.name, p1.age)
+print(p2.name, p2.age)

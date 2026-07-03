@@ -1,0 +1,27 @@
+class Student:
+    object_count = 0 
+
+    def __init__(self, name, marks): 
+        self.name = name   
+        self.marks = marks 
+
+        Student.object_count += 1
+
+    def display(self):
+        print(f"Student: {self.name}, Marks: {self.marks}")
+        print(f"Total Students created so far: {Student.object_count}\n")
+
+print(f"Before creating objects: {Student.object_count}")
+
+s1 = Student("azmeer", 99)   
+s1.display()
+
+
+s2 = Student("anas", 23)  
+s2.display()
+
+
+s3 = Student("aliyan", 33) 
+s1.display()
+
+print(f"Final count from class: {Student.object_count}")
